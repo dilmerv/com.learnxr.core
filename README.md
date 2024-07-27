@@ -1,9 +1,9 @@
 ## Instructions
 
-1- To update this make sure to create a new Unity project or use an existing one.
-2- Go to Window > Package Manager
-3- Click on + then **Add package from disk** where you will browse to the package.json file from this repo.
-4- Click on the package.json file within Unity to make any version, references, or any platform specific modifications. You can also add scripts under Runtime as needed, I already created an [Assembly Definition](https://docs.unity3d.com/Manual/cus-asmdef.html) but if you need to make any changes then look at the com.learnxr.core.asmdef file.
+- To update this make sure to create a new Unity project or use an existing one.
+- Go to Window > Package Manager
+- Click on + then **Add package from disk** where you will browse to the package.json file from this repo.
+- Click on the package.json file within Unity to make any version, references, or any platform specific modifications. You can also add scripts under Runtime as needed, I already created an [Assembly Definition](https://docs.unity3d.com/Manual/cus-asmdef.html) but if you need to make any changes then look at the com.learnxr.core.asmdef file.
 
 ### Additional Resources
 
