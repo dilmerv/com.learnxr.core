@@ -1,0 +1,12 @@
+{
+    "name": "com.learnxr.core",
+    "version": "1.0.0",
+    "displayName": "LearnXR Core",
+    "description": "LearnXR Core utilities for features used throughout our tutorials.",
+    "documentationUrl": "https://learnxr.io",
+    "author": {
+      "name": "Dilmer Valecillos",
+      "email": "hello@learnxr.io",
+      "url": "https://www.learnxr.io"
+    }
+  }
