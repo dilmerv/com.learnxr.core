@@ -1,6 +1,6 @@
 {
   "name": "com.learnxr.core",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "displayName": "LearnXR Core",
   "description": "LearnXR Core utilities for features used throughout our tutorials.\n\n1.0.3: Added new primitive shapes and billboard alignment component.",
   "documentationUrl": "https://learnxr.io",
