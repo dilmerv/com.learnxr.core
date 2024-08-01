@@ -32,7 +32,7 @@ namespace LearnXR.Core.Utilities
 
             if (enabled)
             {
-                debugAreaText.text += $"<color=\"white\">{DateTime.Now.ToString("HH:mm:ss.fff")} {this.GetType().Name} enabled</color>\n";
+                debugAreaText.text += $"<color=\"white\">{DateTime.Now:HH:mm:ss.fff} {GetType().Name} enabled</color>\n";
             }
         }
 
@@ -41,7 +41,6 @@ namespace LearnXR.Core.Utilities
         public void LogInfo(string message)
         {
             ClearLines();
-
             debugAreaText.text += $"<color=\"green\">{DateTime.Now:HH:mm:ss.fff} {message}</color>\n";
         }
 

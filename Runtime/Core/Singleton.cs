@@ -12,17 +12,19 @@ namespace LearnXR.Core
             {
                 if (instance == null)
                 {
-                    var objs = FindObjectsOfType(typeof(T)) as T[];
-                    if (objs.Length > 0)
+                    var objs = FindObjectsOfType(typeof(T), includeInactive: true) as T[];
+                    if (objs is { Length: > 0 })
                         instance = objs[0];
-                    if (objs.Length > 1)
+                    if (objs is { Length: > 1 })
                     {
-                        Debug.LogError("There is more than one " + typeof(T).Name + " in the scene.");
+                        Debug.LogError($"There is more than one {typeof(T).Name} in the scene.");
                     }
                     if (instance == null)
                     {
-                        GameObject obj = new GameObject();
-                        obj.name = $"_{typeof(T).Name}";
+                        GameObject obj = new GameObject
+                        {
+                            name = $"_{typeof(T).Name}"
+                        };
                         instance = obj.AddComponent<T>();
                     }
                 }
