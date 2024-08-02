@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace LearnXR.Core.Utilities
 {
-    public class Rotator : MonoBehaviour
+    public class RotatorWithTime : MonoBehaviour
     {
         [SerializeField] private bool useWorldSpace = true;
         [SerializeField] private Vector3 rotationVelocity = new Vector3(30f, 45f, 60f);
@@ -33,9 +33,6 @@ namespace LearnXR.Core.Utilities
             }
         }
 
-        public void Activate()
-        {
-            rotatorTimer = 0;
-        }
+        public void Activate() =>  rotatorTimer = 0;
     }
 }

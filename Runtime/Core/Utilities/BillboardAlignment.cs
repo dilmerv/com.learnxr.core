@@ -7,7 +7,7 @@ namespace LearnXR.Core.Utilities
         private Transform cameraTransform;
         private bool startedTracking;
 
-        public void Setup(Transform targetTransform)
+        public void AttachTo(Transform targetTransform)
         {
             cameraTransform = targetTransform;
             startedTracking = true;

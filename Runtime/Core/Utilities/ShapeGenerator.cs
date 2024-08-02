@@ -5,10 +5,9 @@ namespace LearnXR.Core.Utilities
     public class ShapeGenerator : Singleton<ShapeGenerator>
     {
         [SerializeField] private float maxScale = 1;
-
         [SerializeField] private Material defaultMaterial;
-
         [SerializeField] private PhysicMaterial physicMaterial;
+        
         public void CreateShape() => CreateShape(transform.position, true);
 
         public void CreateShape(Vector3 position, bool randomizeColor = false)
@@ -19,10 +18,14 @@ namespace LearnXR.Core.Utilities
             GameObject shape = GameObject.CreatePrimitive(GetRandomPrimitiveType());
             shape.transform.localScale = scale;
             shape.transform.position = position;
+            
             var shapePhysics = shape.AddComponent<Rigidbody>();
             shapePhysics.collisionDetectionMode = CollisionDetectionMode.ContinuousDynamic;
+            
             if (physicMaterial) shape.GetComponent<Collider>().material = physicMaterial;
+            
             var shapeRenderer = shape.GetComponent<Renderer>();
+            
             if (randomizeColor)
             {
                 var newMaterial = new Material(Shader.Find("Universal Render Pipeline/Lit"))

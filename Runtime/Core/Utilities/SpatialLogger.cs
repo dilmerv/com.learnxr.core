@@ -5,16 +5,11 @@ using System;
 
 namespace LearnXR.Core.Utilities
 {
-    public class Logger : Singleton<Logger>
+    public class SpatialLogger : Singleton<SpatialLogger>
     {
-        [SerializeField]
-        private TextMeshProUGUI debugAreaText;
-
-        [SerializeField]
-        private bool enableDebug;
-
-        [SerializeField]
-        private int maxLines = 15;
+        [SerializeField] private TextMeshProUGUI debugAreaText;
+        [SerializeField] private bool enableDebug;
+        [SerializeField] private int maxLines = 15;
         
         void Awake()
         {

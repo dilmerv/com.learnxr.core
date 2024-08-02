@@ -6,10 +6,7 @@ namespace LearnXR.Core.Utilities
     {
         private Camera mainCamera;
 
-        private void Awake()
-        {
-            mainCamera = Camera.main;
-        }
+        private void Awake() => mainCamera = Camera.main;
 
         public void PlaceObjectInFrontOfCamera(Transform targetObject, float cameraForwardOffset = 0.5f)
         {
